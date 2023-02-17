@@ -12,7 +12,7 @@ public class ValidParentheses {
         System.out.println(res);
     }
     public static boolean isValid(String s) {
-        boolean isValid = false;
+
         Map<Character, Character> symbolMap = new HashMap<>();
         symbolMap.put(')','(');
         symbolMap.put('}','{');
@@ -27,8 +27,6 @@ public class ValidParentheses {
             if(symbolsStack.size()==0 || symbolMap.get(c)!=symbolsStack.pop())
                 return false;
         }
-        if(symbolsStack.size()==0)
-            return true;
-        return false;
+        return symbolsStack.isEmpty();
     }
 }
