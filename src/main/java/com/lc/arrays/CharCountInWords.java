@@ -11,7 +11,7 @@ public class CharCountInWords {
     }
     static int[] solution(int[] a) {
         int[] digits_count = new int[10];
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
         for(int i:a){
             while(i>0){
                 int digit = i%10;
@@ -29,8 +29,8 @@ public class CharCountInWords {
             if(j==max_count)
                 result.add(j+1);
         }
-        int[] ans = result.stream().mapToInt(Integer::intValue).toArray();
-        return ans;
+
+        return  result.stream().mapToInt(Integer::intValue).toArray();
     }
 
 }
