@@ -11,7 +11,7 @@ public class IdentiticalCharCounts {
 			return false;
 		int [] letters = new int[128];
 		char[] c = s.toCharArray();
-		char[] d = t.toCharArray();
+		//char[] d = t.toCharArray();
 		for(char c1:c){
 			letters[c1]++;
 		}

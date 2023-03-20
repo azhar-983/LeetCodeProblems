@@ -12,6 +12,7 @@ public class CharCountInWords {
     static int[] solution(int[] a) {
         int[] digits_count = new int[10];
         List<Integer> result = new ArrayList<>();
+
         for(int i:a){
             while(i>0){
                 int digit = i%10;
