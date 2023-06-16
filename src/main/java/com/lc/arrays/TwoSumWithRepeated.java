@@ -35,6 +35,7 @@ Map{} - [2,0] - check for 10
 public class TwoSumWithRepeated {
     public static void main(String[] args) {
         List<List<Integer>> result = getTwoSumIndexes(new int[]{2, 3, 5, 7, 9, 4, 7}, 12);
+        result.stream().forEach(System.out::println);
     }
 
     public static List<List<Integer>> getTwoSumIndexes(int[] nums, int target) {
@@ -46,6 +47,7 @@ public class TwoSumWithRepeated {
 
             if (map.containsKey(target - nums[i])) {
                 List<Integer> tuple = new ArrayList<>();
+
                 tuple.add(map.get(target-nums[i]));
                 tuple.add(i);
                 res.add(tuple);

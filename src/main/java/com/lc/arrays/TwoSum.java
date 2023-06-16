@@ -11,6 +11,7 @@ import java.util.Map;
 public class TwoSum {
 
     public static void main(String[] args) {
+
         int[] nums = {2,4,7,9,10};
         int[] res = twoSum(nums,9);
         System.out.println(res[0]+" - "+res[1]);

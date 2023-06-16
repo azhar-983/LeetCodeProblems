@@ -13,7 +13,7 @@ public class RateLimiter {
     }
     static int[] solution(long[] timestamps, String[] ipAddresses, int limit, int window) {
         int[] result = new int[timestamps.length];
-        Map<String, List<Long>> ipAddresMap = new HashMap<String,List<Long>>();
+        Map<String, List<Long>> ipAddresMap = new HashMap<>();
         for(int i=0; i<timestamps.length; i++){
             if(ipAddresMap.containsKey(ipAddresses[i])){
                 long difference= timestamps[i]-ipAddresMap.get(ipAddresses[i]).get(0);

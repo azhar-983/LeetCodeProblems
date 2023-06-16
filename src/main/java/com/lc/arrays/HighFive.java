@@ -14,6 +14,7 @@ public class HighFive {
                 int value = item[1];
 
                 if(!map.containsKey(key)){
+                    //adding marks to maxheap
                     map.put(key,new PriorityQueue<>((a,b)->b-a));
                 }
                 map.get(key).add(value);

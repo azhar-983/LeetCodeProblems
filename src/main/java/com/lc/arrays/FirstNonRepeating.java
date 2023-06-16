@@ -7,6 +7,7 @@ public class FirstNonRepeating {
 		char c = nonRepeatingChar("leetcode");
 		System.out.println(c);
 	}
+
 	static char nonRepeatingChar(String s){
 		int[] char_array = new int[26];
 		for(int i=0; i<s.length(); i++){
