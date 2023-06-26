@@ -34,26 +34,38 @@ Map{} - [2,0] - check for 10
 */
 public class TwoSumWithRepeated {
     public static void main(String[] args) {
-        List<List<Integer>> result = getTwoSumIndexes(new int[]{2, 3, 5, 7, 9, 4, 7}, 12);
+        List<int[]> result = getTwoSumIndexes(new int[]{1,2,3,4,5}, 5);
         result.stream().forEach(System.out::println);
     }
 
-    public static List<List<Integer>> getTwoSumIndexes(int[] nums, int target) {
-        if (nums.length == 0)
+    public static List<int[]> getTwoSumIndexes(int[] arr, int s) {
+        if (arr.length == 0)
             return null;
         Map<Integer, Integer> map = new HashMap<>();
-        List<List<Integer>> res = new ArrayList<>();
-        for (int i = 0; i < nums.length; i++) {
+        List<int[]> res = new ArrayList<>();
+        /*for (int i = 0; i < arr.length; i++) {
 
-            if (map.containsKey(target - nums[i])) {
+            if (map.containsKey(s - arr[i])) {
                 List<Integer> tuple = new ArrayList<>();
 
-                tuple.add(map.get(target-nums[i]));
+                tuple.add(map.get(s-arr[i]));
                 tuple.add(i);
                 res.add(tuple);
             }
-            map.put(nums[i], i);
-            System.out.println(map.get(nums[i]));
+            map.put(arr[i], i);
+            System.out.println(map.get(arr[i]));
+        }*/
+        for (int i = 0; i < arr.length; i++) {
+
+            if (map.containsKey(s - arr[i])) {
+                int[] tuple = new int[2];
+
+                tuple[0] = map.get(s-arr[i]);
+                tuple[1] = i;
+                res.add(tuple);
+            }
+            map.put(arr[i], i);
+            //System.out.println(map.get(arr[i]));
         }
         return res;
     }

@@ -10,7 +10,7 @@ package com.lc.string;
 public class MergeStringsAlternate {
     public static void main(String[] args) {
 
-        String result = mergeAlternately("abcd","pq");
+        String result = mergeAlternately("abcdef","pqr");
         System.out.println(result);
     }
     public static String mergeAlternately(String word1, String word2) {
